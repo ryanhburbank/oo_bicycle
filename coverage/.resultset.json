@@ -1,0 +1,62 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/ryanhburbank/Desktop/ruby/poodr/bicycle/app/gear.rb": [
+        1,
+        1,
+        null,
+        1,
+        4,
+        4,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/ryanhburbank/Desktop/ruby/poodr/bicycle/app/wheel.rb": [
+        1,
+        1,
+        null,
+        1,
+        4,
+        4,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/ryanhburbank/Desktop/ruby/poodr/bicycle/spec/wheel_spec.rb": [
+        1,
+        null,
+        1,
+        5,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1391642515
+  }
+}
