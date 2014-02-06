@@ -1,9 +1,9 @@
 class Gear
 	attr_reader :chainring, :cog
 
-	def initialize(chainring, cog)
-		@chainring = chainring
-		@cog = cog
+	def initialize(args)
+		@chainring = args[:chainring]
+		@cog       = args[:cog]
 	end
 
 	def ratio

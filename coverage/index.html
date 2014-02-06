@@ -14,7 +14,7 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-02-05T17:21:55-06:00">2014-02-05T17:21:55-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-02-05T18:23:06-06:00">2014-02-05T18:23:06-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.61
+         1.91
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>3</b> files in total.
-    <b>27</b> relevant lines. 
-    <span class="green"><b>27</b> lines covered</span> and
+    <b>5</b> files in total.
+    <b>58</b> relevant lines. 
+    <span class="green"><b>58</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -51,31 +51,51 @@
     <tbody>
       
       <tr>
+        <td class="strong"><a href="#e3eb49a680d2e404057ed2990e3a6a45435d708b" class="src_link" title="app/bicycle.rb">app/bicycle.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>23</td>
+        <td>13</td>
+        <td>13</td>
+        <td>0</td>
+        <td>1.7</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#7818e76644dd7eefb67f40ea09a27f0fc136b94d" class="src_link" title="app/gear.rb">app/gear.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>12</td>
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>1.9</td>
+        <td>3.3</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#4adf106aab695ed8f6acf02cb73c3a6cfaac1935" class="src_link" title="app/wheel.rb">app/wheel.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>12</td>
-        <td>7</td>
-        <td>7</td>
+        <td>16</td>
+        <td>9</td>
+        <td>9</td>
         <td>0</td>
-        <td>1.9</td>
+        <td>3.1</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#36a614c5ecb1da711d23f9a0248d6b073e06c11c" class="src_link" title="spec/gear_spec.rb">spec/gear_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>24</td>
+        <td>13</td>
+        <td>13</td>
+        <td>0</td>
+        <td>1.3</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#c9d3051fb531b632685c4d02a72354187fc95b6e" class="src_link" title="spec/wheel_spec.rb">spec/wheel_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>25</td>
-        <td>13</td>
-        <td>13</td>
+        <td>31</td>
+        <td>16</td>
+        <td>16</td>
         <td>0</td>
         <td>1.3</td>
       </tr>
@@ -95,6 +115,162 @@
       </div>
     
       <div class="source_files">
+      
+        <div class="source_table" id="e3eb49a680d2e404057ed2990e3a6a45435d708b">
+  <div class="header">
+    <h3>app/bicycle.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>13</b> relevant lines. 
+      <span class="green"><b>13</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require_relative &quot;./gear&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require_relative &quot;./wheel&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Bicycle</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	attr_reader :gear, :wheel</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def initialize(args)	</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="8">
+          <span class="hits">4</span>
+          
+          <code class="ruby">		@gear  = args[:gear]  || Gear.new({ chainring: args[:chainring], cog: args[:cog] })</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="9">
+          <span class="hits">4</span>
+          
+          <code class="ruby">		@wheel = args[:wheel] || Wheel.new({ rim: args[:rim], tire: args[:tire] }) </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def gear_inches</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="13">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		ratio * diameter</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def diameter</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="17">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		wheel.diameter</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def ratio</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="21">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		gear.ratio</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
       
         <div class="source_table" id="7818e76644dd7eefb67f40ea09a27f0fc136b94d">
   <div class="header">
@@ -131,19 +307,19 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">	def initialize(chainring, cog)</code>
+          <code class="ruby">	def initialize(args)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="5">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="8" data-linenumber="5">
+          <span class="hits">8</span>
           
-          <code class="ruby">		@chainring = chainring</code>
+          <code class="ruby">		@chainring = args[:chainring]</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="6">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="8" data-linenumber="6">
+          <span class="hits">8</span>
           
-          <code class="ruby">		@cog = cog</code>
+          <code class="ruby">		@cog       = args[:cog]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
@@ -164,8 +340,8 @@
           <code class="ruby">	def ratio</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="10">
+          <span class="hits">3</span>
           
           <code class="ruby">		(chainring / cog.to_f).round(3)</code>
         </li>
@@ -191,8 +367,8 @@
     <h3>app/wheel.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>7</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>9</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -221,19 +397,19 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">	def initialize(rim, tire)</code>
+          <code class="ruby">	def initialize(args)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="5">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="9" data-linenumber="5">
+          <span class="hits">9</span>
           
-          <code class="ruby">		@rim = rim</code>
+          <code class="ruby">		@rim  = args[:rim]</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="6">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="9" data-linenumber="6">
+          <span class="hits">9</span>
           
-          <code class="ruby">		@tire = tire</code>
+          <code class="ruby">		@tire = args[:tire]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
@@ -254,8 +430,8 @@
           <code class="ruby">	def diameter</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="4" data-linenumber="10">
+          <span class="hits">4</span>
           
           <code class="ruby">		(rim + (tire * 2)).round(3)</code>
         </li>
@@ -269,6 +445,30 @@
         <li class="never" data-hits="" data-linenumber="12">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def circumference</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		(diameter * Math::PI).round(3)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
           <code class="ruby">end</code>
         </li>
       
@@ -276,9 +476,9 @@
   </pre>
 </div>
       
-        <div class="source_table" id="c9d3051fb531b632685c4d02a72354187fc95b6e">
+        <div class="source_table" id="36a614c5ecb1da711d23f9a0248d6b073e06c11c">
   <div class="header">
-    <h3>spec/wheel_spec.rb</h3>
+    <h3>spec/gear_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>13</b> relevant lines. 
@@ -305,13 +505,175 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">describe &quot;Wheel&quot; do</code>
+          <code class="ruby">describe &quot;Gear&quot; do</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="4">
           <span class="hits">5</span>
           
-          <code class="ruby">	let(:wheel1) { Wheel.new(26, 1.5) }</code>
+          <code class="ruby">	let (:gear1) { Gear.new({chainring: 52, cog: 11}) }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	describe &quot;new&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		it &quot;should return an instance of the Gear class&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			gear1.should be_an_instance_of Gear</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		it &quot;should initialize @chainring with the value of the first arg&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			gear1.chainring.should eq 52</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		it &quot;should initialize @cog with the value of the second arg&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			gear1.cog.should eq 11</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		describe &quot;#ratio&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			it &quot;should return the gear ratio by dividing chainring by the cog&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">				gear1.ratio.should eq 4.727 </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">			end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="c9d3051fb531b632685c4d02a72354187fc95b6e">
+  <div class="header">
+    <h3>spec/wheel_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &quot;spec_helper&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe &quot;Wheel&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="4">
+          <span class="hits">6</span>
+          
+          <code class="ruby">	let(:wheel1) { Wheel.new({rim: 26, tire: 1.5}) }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
@@ -435,6 +797,42 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	describe &quot;#circumference&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		it &quot;returns the diameter * Pi&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			wheel1.circumference.should eq 91.106</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">end</code>

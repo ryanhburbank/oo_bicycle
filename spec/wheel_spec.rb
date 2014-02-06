@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe "Wheel" do
-	let(:wheel1) { Wheel.new(26, 1.5) }
+	let(:wheel1) { Wheel.new({rim: 26, tire: 1.5}) }
 
 	describe "#new" do
 		it "returns an instance of the Wheel class" do
@@ -20,6 +20,12 @@ describe "Wheel" do
 	describe "#diamter" do
 		it "returns the wheel's diameter, by adding rim diameter to twice the tire diameter" do
 			wheel1.diameter.should eq 29.0
+		end
+	end
+
+	describe "#circumference" do
+		it "returns the diameter * Pi" do
+			wheel1.circumference.should eq 91.106
 		end
 	end
 end

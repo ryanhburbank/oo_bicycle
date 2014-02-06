@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe "Gear" do
-	let (:gear1) { Gear.new(52, 11) }
+	let (:gear1) { Gear.new({chainring: 52, cog: 11}) }
 	describe "new" do
 		it "should return an instance of the Gear class" do
 			gear1.should be_an_instance_of Gear
